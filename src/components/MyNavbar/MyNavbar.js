@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
-
 import {
   Collapse,
   Navbar,
@@ -10,12 +9,13 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-class MyNavbar extends Component {
-  state = {
+import './MyNavbar.scss';
+
+class MyNavbar extends React.Component {
+  state= {
     isOpen: false,
   }
 
@@ -23,10 +23,10 @@ class MyNavbar extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   }
 
-  logoutButton = (e) => {
+  logMeOut = (e) => {
     e.preventDefault();
     firebase.auth().signOut();
-  };
+  }
 
   render() {
     const { authed } = this.props;
@@ -34,24 +34,24 @@ class MyNavbar extends Component {
       if (authed) {
         return (
           <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={RRNavLink} to='/new'>New Scat</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink onClick={this.logoutButton}>Logout</NavLink>
-              </NavItem>
-            </Nav>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/home'>Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={RRNavLink} to='/new'>New Scat</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink onClick={this.logMeOut}>Logout</NavLink>
+            </NavItem>
+          </Nav>
         );
       }
-      return <Nav className="ml-auto" navbar/>;
+      return <Nav className="ml-auto" navbar />;
     };
 
     return (
-      <div>
-        <Navbar color="light" light expand="md">
+      <div className="MyNavbar">
+        <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">Scat Surprise</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>

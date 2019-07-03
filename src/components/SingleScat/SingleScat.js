@@ -4,7 +4,7 @@ class SingleScat extends Component {
   render() {
     return (
       <div>
-        Hey
+        SingleScat
       </div>
     );
   }

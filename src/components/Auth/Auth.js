@@ -14,7 +14,7 @@ class Auth extends Component {
   render() {
     return (
       <div className="Auth">
-        <button className="btn btn-primary logIn" onClick={this.loginClickEvent}>Log Me In</button>
+        <button className="btn btn-dark logIn" onClick={this.loginClickEvent}>Log Me In</button>
       </div>
     );
   }
