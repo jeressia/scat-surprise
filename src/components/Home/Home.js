@@ -9,10 +9,20 @@ class Home extends Component {
     scats: [],
   }
 
-  componentDidMount() {
+  getScats = () => {
     scatData.getMyScats(firebase.auth().currentUser.uid)
       .then(scats => this.setState({ scats }))
       .catch(err => console.error('uh-oh, scats', err));
+  }
+
+  componentDidMount() {
+    this.getScats();
+  }
+
+  deleteScat = (scatId) => {
+    scatData.deleteScats(scatId)
+      .then(() => this.getScats())
+      .catch(err => console.error('unable to delete', err));
   }
 
   render() {
@@ -20,6 +30,7 @@ class Home extends Component {
       <ScatCard
       key={scat.id}
       scat={scat}
+      deleteScat={this.deleteScat}
       />
     ));
 
