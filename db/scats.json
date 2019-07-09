@@ -1,0 +1,44 @@
+{
+  "scats": {
+    "scat1": {
+      "location": "NSS",
+      "weight": "1lb",
+      "color": "green",
+      "sampleName": "Big Sh*t Poppin'",
+      "animal": "Josephine",
+      "uid": "L5WWfn1UFkRlnqXkSMtNdcL5Cxf2"
+    },
+    "scat2": {
+      "location": "Kroger",
+      "weight": "13oz",
+      "color": "brown",
+      "sampleName": "DooDoo Brown",
+      "animal": "Josephine",
+      "uid": "L5WWfn1UFkRlnqXkSMtNdcL5Cxf2"
+    },
+    "scat3": {
+      "location": "Disney World",
+      "weight": "3lbs",
+      "color": "brown",
+      "sampleName": "Call 911",
+      "animal": "Josephine",
+      "uid": "L5WWfn1UFkRlnqXkSMtNdcL5Cxf2"
+    },
+    "scat4": {
+      "location": "Myrtle Beach",
+      "weight": "5oz",
+      "color": "beige",
+      "sampleName": "Pellets'",
+      "animal": "cat",
+      "uid": "1238"
+    },
+    "scat5": {
+      "location": "Airport Landing Strip",
+      "weight": "2lbs 1oz",
+      "color": "black",
+      "sampleName": "OMG'",
+      "animal": "dog",
+      "uid": "38282"
+    }
+  }
+}

@@ -1,10 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class SingleScat extends Component {
+import './SingleScat.scss';
+
+class SingleScat extends React.Component {
   render() {
+    const { scat } = this.props;
     return (
-      <div>
-        SingleScat
+      <div className="SingleScat">
+        <div className="card" id={scat.location}>
+            <div className="card-body">
+                <h5 className="card-title">{scat.location}</h5>
+            </div>
+        </div>
       </div>
     );
   }
