@@ -35,8 +35,8 @@ class Home extends Component {
     ));
 
     return (
-      <div className="Home col">
-            <div className="d-flex">
+      <div className="Home col-12">
+            <div className="d-flex flex-wrap">
               {makeScatCards}
             </div>
             </div>
