@@ -22,4 +22,11 @@ const deleteScats = scatId => axios.delete(`${baseUrl}/scats/${scatId}.json`);
 
 const getSingleScat = scatId => axios.get(`${baseUrl}/scats/${scatId}.json`);
 
-export default { getMyScats, deleteScats, getSingleScat };
+const postScat = newScat => axios.post(`${baseUrl}/scats.json`, newScat);
+
+export default {
+  getMyScats,
+  deleteScats,
+  getSingleScat,
+  postScat,
+};
