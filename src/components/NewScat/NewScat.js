@@ -47,7 +47,7 @@ class NewScat extends Component {
     const { newScat } = this.state;
     return (
       <div>
-        <h1>NewScat</h1>
+        <h1>New Scat</h1>
         <form onSubmit={this.formSubmit}>
           <div className="form-group">
             <label htmlFor="sampleName">Sample Name</label>
